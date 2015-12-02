@@ -28,6 +28,8 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <!--<link rel="stylesheet" type="text/css" href="css/index.css" /> -->
         <title>Hello World</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
     </head>
     <body>
         
@@ -51,7 +53,7 @@ padding: 0;
                 #leftBar{
                   
                     height: 100%;
-                    background-color: white;
+                    
                     margin-right: 0  100% 0 0;
                     z-index: 3;
                     position: absolute;
@@ -60,7 +62,7 @@ padding: 0;
                 #rightBar{
                     
                     height: 100%;
-                    background-color: white;
+                  
                     margin:0 0 0 90.5%;
                     z-index: 3;
                     position: absolute;
@@ -81,32 +83,32 @@ padding: 0;
 	background:-moz-linear-gradient( center top, #79bbff 5%, #4197ee 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#4197ee');
 	background-color:#79bbff;
-	-webkit-border-top-left-radius:20px;
-	-moz-border-radius-topleft:20px;
-	border-top-left-radius:20px;
-	-webkit-border-top-right-radius:20px;
-	-moz-border-radius-topright:20px;
-	border-top-right-radius:20px;
-	-webkit-border-bottom-right-radius:20px;
-	-moz-border-radius-bottomright:20px;
-	border-bottom-right-radius:20px;
-	-webkit-border-bottom-left-radius:20px;
-	-moz-border-radius-bottomleft:20px;
-	border-bottom-left-radius:20px;
+	-webkit-border-top-left-radius:30px;
+	-moz-border-radius-topleft:30px;
+	border-top-left-radius:30px;
+	-webkit-border-top-right-radius:30px;
+	-moz-border-radius-topright:30px;
+	border-top-right-radius:30px;
+	-webkit-border-bottom-right-radius:30px;
+	-moz-border-radius-bottomright:30px;
+	border-bottom-right-radius:30px;
+	-webkit-border-bottom-left-radius:30px;
+	-moz-border-radius-bottomleft:30px;
+	border-bottom-left-radius:30px;
 	text-indent:0;
 	border:1px solid #469df5;
 	display:inline-block;
 	color:#ffffff;
 	font-family:Times New Roman;
-	font-size:60px;
+	font-size:75px;
 	font-weight:bold;
 	font-style:normal;
-	height:120px;
-	line-height:39px;
+	height:100px;
+	-webkit-user-select: none;
 	width:170px;
 	text-decoration:none;
 	text-align:center;
-	text-shadow:1px 1px 0px #287ace;
+	
 }
 .btn:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff) );
@@ -141,9 +143,18 @@ padding: 0;
        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript">
             app.initialize();
             
+            $(document).ready(function(){
+            $( function () {
+                $( "#num1" ).on( "vmousedown", "p", function() {
+                    $("#myVideo" ).play();
+                    });
+                
+             });
         </script>
     </body>
 </html>
