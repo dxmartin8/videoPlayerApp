@@ -135,15 +135,15 @@ padding: 0;
         
      </video>    
      <div id="leftBar">
-        <span><a href="#" class="btn" id="num1">Play</a></span>
-        <span><a href="#" class="btn" id="num2">Play</a></span>
-        <span><a href="#" class="btn" id="num3">Play</a></span>
+        <span><a class="btn" id="num1">Play</a></span>
+        <span><a  class="btn" id="num2">Play</a></span>
+        <span><a class="btn" id="num3">Play</a></span>
     </div>
     
     <div id="rightBar">
-        <span><a href="#" class="btn" id="num4">Play</a></span>
-        <span><a href="#" class="btn" id="num5">Play</a></span>
-        <span><a href="#" class="btn" id="num6">Play</a></span>
+        <span><a class="btn" id="num4">Play</a></span>
+        <span><a  class="btn" id="num5">Play</a></span>
+        <span><a  class="btn" id="num6">Play</a></span>
      </div>
     
 </div>
@@ -154,14 +154,18 @@ padding: 0;
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript">
             app.initialize();
-           $('.btn').on("vmousedown",function(){
+         $('.btn').on ("vmouseout",function(){
+  $('#myVideo')[0].pause();
+  
+            $('.btn').on("vmousedown",function(){
   $('#myVideo')[0].play();
                $('.btn').on ("vmouseup",function(){
   $('#myVideo')[0].pause();
-  
+                     
       });
                
       });
+                });
             
                 
              
