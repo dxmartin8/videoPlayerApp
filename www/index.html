@@ -71,7 +71,7 @@ padding: 0;
                 }
                 span{
                     display: block;
-                    padding: 33%;
+                    padding: 66%;
                     margin: auto;
 
                 }
@@ -150,6 +150,8 @@ padding: 0;
            $('.btn').on("vmousedown",function(){
   $('#myVideo')[0].play();
                $('.btn').on ("vmouseup",function(){
+  $('#myVideo')[0].pause();
+                   $('.btn').on ("vmouseout",function(){
   $('#myVideo')[0].pause();
                
       });
