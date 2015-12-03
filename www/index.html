@@ -147,9 +147,9 @@ padding: 0;
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript">
             app.initialize();
-           $('.btn').mousedown(function(){
+           $('.btn').on("vmousedown",function(){
   $('#myVideo')[0].play();
-               $('.btn').mouseup(function(){
+               $('.btn').on ("vmouseup",function(){
   $('#myVideo')[0].pause();
                
       });
