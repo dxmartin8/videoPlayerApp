@@ -54,7 +54,7 @@ padding: 0;
                   
                     height: 100%;
                     
-                    margin-right: 0  100% 0 0;
+                   margin:0 -5% 0 0;
                     z-index: 3;
                     position: absolute;
                    
@@ -63,7 +63,7 @@ padding: 0;
                     
                     height: 100%;
                   
-                    margin:0 0 0 90.5%;
+                    margin:0 0 0 65%;
                     z-index: 3;
                     position: absolute;
                    float: right;
@@ -71,8 +71,9 @@ padding: 0;
                 }
                 span{
                     display: block;
-                    padding: 66%;
+                    padding: 33%;
                     margin: auto;
+                    
 
                 }
                 .btn {
@@ -108,6 +109,12 @@ padding: 0;
 	width:180px;
 	text-decoration:none;
 	text-align:center;
+                    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 	
 }
 .btn:hover {
@@ -128,15 +135,15 @@ padding: 0;
         
      </video>    
      <div id="leftBar">
-        <span></span><a href="#" class="btn" id="num1">Play</a></span>
-        <span></span><a href="#" class="btn" id="num2">Play</a></span>
-        <span></span><a href="#" class="btn" id="num3">Play</a></span>
+        <span><a href="#" class="btn" id="num1">Play</a></span>
+        <span><a href="#" class="btn" id="num2">Play</a></span>
+        <span><a href="#" class="btn" id="num3">Play</a></span>
     </div>
     
     <div id="rightBar">
-        <span></span><a href="#" class="btn" id="num4">Play</a></span>
-        <span></span><a href="#" class="btn" id="num5">Play</a></span>
-        <span></span><a href="#" class="btn" id="num6">Play</a></span>
+        <span><a href="#" class="btn" id="num4">Play</a></span>
+        <span><a href="#" class="btn" id="num5">Play</a></span>
+        <span><a href="#" class="btn" id="num6">Play</a></span>
      </div>
     
 </div>
@@ -151,9 +158,7 @@ padding: 0;
   $('#myVideo')[0].play();
                $('.btn').on ("vmouseup",function(){
   $('#myVideo')[0].pause();
-                   $('.btn').on ("vmouseout",function(){
-  $('#myVideo')[0].pause();
-               
+  
       });
                
       });
