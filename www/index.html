@@ -63,7 +63,7 @@ padding: 0;
                     
                     height: 100%;
                   
-                    margin:0 0 0 95%;
+                    right: 45%;
                     z-index: 3;
                     position: absolute;
                    float: right;
@@ -135,15 +135,15 @@ padding: 0;
         
      </video>    
      <div id="leftBar">
-        <span><a class="btn" id="num1">Play</a></span>
-        <span><a  class="btn" id="num2">Play</a></span>
-        <span><a class="btn" id="num3">Play</a></span>
+        <span><a class="btn" id="num1" >Play</a></span>
+        <span><a  class="btn" id="num2" >Play</a></span>
+        <span><a class="btn" id="num3" >Play</a></span>
     </div>
     
     <div id="rightBar">
-        <span><a class="btn" id="num4">Play</a></span>
-        <span><a  class="btn" id="num5">Play</a></span>
-        <span><a  class="btn" id="num6">Play</a></span>
+        <span><a class="btn" id="num4"  >Play</a></span>
+        <span><a  class="btn" id="num5" >Play</a></span>
+        <span><a  class="btn" id="num6" >Play</a></span>
      </div>
     
 </div>
@@ -153,32 +153,353 @@ padding: 0;
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript">
+            app.initialize();
+           //variables
+            var btn1 = document.getElementById("num1");
+            var btn2 = document.getElementById("num2");
+            var btn3 = document.getElementById("num3");
+            var btn4 = document.getElementById("num4");
+            var btn5 = document.getElementById("num5");
+            var btn6 = document.getElementById("num6");
+            var btnArray = [btn1,btn2,btn3,btn4,btn5,btn6]
             var elems = document.getElementsByClassName('btn');
-
+            // hide buttons and show btn1
             for(var i = 0; i != elems.length; ++i)
             {   
                 elems[i].style.visibility = "hidden"; // hidden has to be a string
             }
             document.getElementById('num1').style.visibility = 'visible';
-             
-             
-            app.initialize();
-         $('.btn').on ("vmousemove",function(){
-  $('#myVideo')[0].pause();
-  
-            $('.btn').on("vmousedown",function(){
-  $('#myVideo')[0].play();
-               $('.btn').on ("vmouseup",function(){
-  $('#myVideo')[0].pause();
-                     
-      });
-               
-      });
+            // play video  function
+             $('.btn').on ("vmousemove",function(){
+                $('#myVideo')[0].pause();
+             $('.btn').on("vmousedown",function(){
+                $('#myVideo')[0].play();
+             $('.btn').on ("vmouseup",function(){
+                $('#myVideo')[0].pause();
+                 $('.btn').on ("vmouseout",function(){
+                $('#myVideo')[0].pause();
+               });});});});
+           
+            // button display patterns
+            var dis1 = $(btn1).on("vmousedown",function(){
+                btn1to4FiveSecs();
+                $(btn4).on("vmousedown",function(){
+                    btn4to2TenSecs();
                 });
-       
+            });
+                
             
-       
+              
+            //*****************button route mapping************************* 
+            //**************************************************************
+            //**************************************************************
+            // button display funtion for btn1 to btn4
+            function btn1to4FiveSecs(){
+                setTimeout(function(){
+                    btn1.style.visibility="hidden";
+                    btn4.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000 );
+               }
+            function btn1to4TenSecs(){
+                setTimeout(function(){
+                    btn1.style.visibility="hidden";
+                    btn4.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn1 to btn5
+            function btn1to5FiveSecs(){
+                setTimeout(function(){
+                    btn1.style.visibility="hidden";
+                    btn5.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn1to5TenSecs(){
+                setTimeout(function(){
+                    btn1.style.visibility="hidden";
+                    btn5.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn1 to btn6
+            function btn1to6FiveSecs(){
+                setTimeout(function(){
+                    btn1.style.visibility="hidden";
+                    btn6.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn1to6TenSecs(){
+                setTimeout(function(){
+                    btn1.style.visibility="hidden";
+                    btn6.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn2 to btn4
+            function btn2to4FiveSecs(){
+                setTimeout(function(){
+                    btn2.style.visibility="hidden";
+                    btn4.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn2to4TenSecs(){
+                setTimeout(function(){
+                    btn2.style.visibility="hidden";
+                    btn4.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn2 to btn5
+            function btn2to5FiveSecs(){
+                setTimeout(function(){
+                    btn2.style.visibility="hidden";
+                    btn5.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn2to5TenSecs(){
+                setTimeout(function(){
+                    btn2.style.visibility="hidden";
+                    btn5.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn2 to btn6
+            function btn2to6FiveSecs(){
+                setTimeout(function(){
+                    btn2.style.visibility="hidden";
+                    btn6.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn2to6TenSecs(){
+                setTimeout(function(){
+                    btn2.style.visibility="hidden";
+                    btn6.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn3 to btn4
+            function btn3to4FiveSecs(){
+                setTimeout(function(){
+                    btn3.style.visibility="hidden";
+                    btn4.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn3to4TenSecs(){
+                setTimeout(function(){
+                    btn3.style.visibility="hidden";
+                    btn4.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn3 to btn5
+            function btn3to5FiveSecs(){
+                setTimeout(function(){
+                    btn3.style.visibility="hidden";
+                    btn5.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn3to5TenSecs(){
+                setTimeout(function(){
+                    btn3.style.visibility="hidden";
+                    btn5.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn3 to btn6
+            function btn3to6FiveSecs(){
+                setTimeout(function(){
+                    btn2.style.visibility="hidden";
+                    btn6.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn2to6TenSecs(){
+                setTimeout(function(){
+                    btn2.style.visibility="hidden";
+                    btn6.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn4 to btn1
+            function btn4to1FiveSecs(){
+                setTimeout(function(){
+                    btn4.style.visibility="hidden";
+                    btn1.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000 );
+               }
+            function btn4to1TenSecs(){
+                setTimeout(function(){
+                    btn4.style.visibility="hidden";
+                    btn1.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn4 to btn2
+            function btn4to2FiveSecs(){
+                setTimeout(function(){
+                    btn4.style.visibility="hidden";
+                    btn2.style.visibility="visible";
+                }, 5000  );
+               }
+            function btn4to2TenSecs(){
+                setTimeout(function(){
+                    btn4.style.visibility="hidden";
+                    btn2.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn4 to btn3
+            function btn4to3FiveSecs(){
+                setTimeout(function(){
+                    btn4.style.visibility="hidden";
+                    btn3.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn4to3TenSecs(){
+                setTimeout(function(){
+                    btn4.style.visibility="hidden";
+                    btn3.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn5 to btn1
+            function btn5to1FiveSecs(){
+                setTimeout(function(){
+                    btn5.style.visibility="hidden";
+                    btn1.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn5to1TenSecs(){
+                setTimeout(function(){
+                    btn5.style.visibility="hidden";
+                    btn1.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn5 to btn2
+            function btn5to2FiveSecs(){
+                setTimeout(function(){
+                    btn5.style.visibility="hidden";
+                    btn2.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn5to2TenSecs(){
+                setTimeout(function(){
+                    btn5.style.visibility="hidden";
+                    btn2.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn5 to btn3
+            function btn5to3FiveSecs(){
+                setTimeout(function(){
+                    btn5.style.visibility="hidden";
+                    btn3.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn5to3TenSecs(){
+                setTimeout(function(){
+                    btn5.style.visibility="hidden";
+                    btn3.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn6 to btn1
+            function btn6to1FiveSecs(){
+                setTimeout(function(){
+                    btn6.style.visibility="hidden";
+                    btn1.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn6to1TenSecs(){
+                setTimeout(function(){
+                    btn6.style.visibility="hidden";
+                    btn1.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn6 to btn2
+            function btn6to2FiveSecs(){
+                setTimeout(function(){
+                    btn6.style.visibility="hidden";
+                    btn2.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn6to2TenSecs(){
+                setTimeout(function(){
+                    btn6.style.visibility="hidden";
+                    btn2.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
+            // button display funtion for btn6 to btn3
+            function btn6to3FiveSecs(){
+                setTimeout(function(){
+                    btn6.style.visibility="hidden";
+                    btn3.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 5000  );
+               }
+            function btn6to3TenSecs(){
+                setTimeout(function(){
+                    btn6.style.visibility="hidden";
+                    btn3.style.visibility="visible";
+                    $("#myVideo")[0].pause();
+                    kill();
+                }, 10000  );
+               }
             
+            
+                
             
                 
              
