@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+$.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
+    options.async = true;
+});
 var app = {
     // Application Constructor
     initialize: function() {
