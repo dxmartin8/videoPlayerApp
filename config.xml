@@ -3,6 +3,7 @@
   <description>Hello World sample application that responds to the deviceready event.</description>
   <author href="http://phonegap.com" email="support@phonegap.com">PhoneGap Team</author>
   <content src="index.html"/>
+    
   <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="landscape"/>
@@ -19,20 +20,19 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="android-installLocation" value="auto"/>
+    <plugin name="cordova-plugin-inappbrowser" spec="1.0.1" source="pgb" />
   <gap:plugin name="org.apache.cordova.battery-status"/>
-  <gap:plugin name="org.apache.cordova.camera"/>
-  <gap:plugin name="org.apache.cordova.media-capture"/>
+
   <gap:plugin name="org.apache.cordova.console"/>
-  <gap:plugin name="org.apache.cordova.contacts"/>
+  
   <gap:plugin name="org.apache.cordova.device"/>
   <gap:plugin name="org.apache.cordova.device-motion"/>
   <gap:plugin name="org.apache.cordova.device-orientation"/>
   <gap:plugin name="org.apache.cordova.dialogs"/>
-  <gap:plugin name="org.apache.cordova.file"/>
-  <gap:plugin name="org.apache.cordova.file-transfer"/>
+  
   <gap:plugin name="org.apache.cordova.geolocation"/>
   <gap:plugin name="org.apache.cordova.globalization"/>
-  <gap:plugin name="org.apache.cordova.inappbrowser"/>
+  
   <gap:plugin name="org.apache.cordova.media"/>
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
