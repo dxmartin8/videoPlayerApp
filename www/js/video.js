@@ -12,49 +12,62 @@
             var btn5 = document.getElementById("num5");
             var btn6 = document.getElementById("num6");
             
-            var elems = document.getElementsByClassName('btn');
+            var elems = document.getElementsByClassName('ui-btn');
             
             // hide buttons and show btn1
-            for(var i = 0; i != elems.length; ++i)
+            $(document).on("pagebeforecreate",function(event){
+                for(var i = 0; i != elems.length; ++i)
             {   
                 elems[i].style.visibility = "hidden"; // hidden has to be a string
             }
-            document.getElementById('num1').style.visibility = 'visible';
-            // play video  function             
-             $('.btn').on("vmousedown",function(){
-                 mdown = true;
+            document.getElementById('num1').style.visibility = 'visible';})
+            
+            // play video  function   
+           /* $(document).on('taphold', '.ui-btn', function(){ 
+                $("#myVideo")[0].play();
+            });*/
+
+            $( function () {
+                $( document ).on ( "vmousemove", ".ui-btn", function() {
+                mdown = true;
                  if(mdown){
                 $('#myVideo')[0].play();
                  }else{
                   $('#myVideo')[0].pause();   
                  }
-               });
-           $('.btn').on("vmouseup",function(){
-                 mup = true;
+                })});
+            $( function () {
+                $( document ).on ( "vmouseup", ".ui-btn", function() {
+               mup = true;
                  if(mup){
                 $('#myVideo')[0].pause();
                  }
-               });
-            $(".btn").on("vmouseout",function(){
-                         $("#myVideo")[0].pause();
+                })});
+             $( function () {
+                $( document ).on ( "vmouseout", ".ui-btn", function() {
+                $("#myVideo")[0].pause();
                          });
+                });
+             
+           
            
                                    
-            //Button Pattern Displays            
+            //Button Pattern Displays     
+
             var dis1= function(){
-                $(btn1).on("vmousedown",function(){
+                $(document).on("vmousedown", btn1, function(){
                 btn1to4FiveSecs();
                 });
-                $(btn4).on("vmousedown",function(){
+                $(document).on("vmousedown", btn4, function(){
                     btn4to2TenSecs();
                 });
-                $(btn2).on("vmousedown",function(){
+                $(document).on("vmousedown", btn2, function(){
                     btn2to6FiveSecs();
                 });
-                $(btn6).on("vmousedown",function(){
+                $(document).on("vmousedown", btn6, function(){
                     btn6to3TenSecs();
                 });
-                $(btn3).on("vmousedown",function(){
+                $(document).on("vmousedown", btn3,function(){
                     btn3to5TenSecs();
                 });
             };
@@ -112,6 +125,7 @@
             //**************************************************************
             //**************************************************************
             // button display funtion for btn1 to btn4
+            $(document).on("pagebeforecreate", function(event){
             function btn1to4FiveSecs(){
                 setTimeout(function(){
                     btn1.style.visibility="hidden";
@@ -418,3 +432,4 @@
                     kill();
                 }, 10000  );
                }
+                })

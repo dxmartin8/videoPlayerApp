@@ -26,19 +26,15 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+
      <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-                <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-            
-           
-           
-    </script>
     </head>
     <body>
        
@@ -49,15 +45,22 @@
     <div data-role="navbar">
       <ul>
         <li><a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-bottom">Home</a></li>
-        <li><a href="video.html" class="ui-btn ui-shadow ui-corner-all ui-icon-video ui-btn-icon-bottom">Ad Reel</a></li>
+        <li><a href="video.html" data-transition="flow" class="ui-btn ui-shadow ui-corner-all ui-icon-video ui-btn-icon-bottom">Ad Reel</a></li>
         <li><a href="#" onclick="window.open('http://www.payadtention.com/', '_blank', 'location=yes');" class="ui-btn ui-shadow ui-corner-all ui-icon-shop ui-btn-icon-bottom">Store</a></li>
       </ul>
     </div>
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>My Content..</p>
+    <p>Welcome to PayAdtention!</p>
+    <p>How to use this app</p>
   </div>
-
+    
+     
+    
+        
+        <script type="text/javascript">
+            app.initialize();
+        </script>
     </body>
 </html>
