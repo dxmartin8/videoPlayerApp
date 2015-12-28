@@ -1,48 +1,49 @@
 
-
+$(document).on("pagecreate","#pagetwo",function(){
 
 //variables
+            
             var mdown = false;
             var mup = true;
             var mmove = true;
-            var btn1 = document.getElementById("num1");
-            var btn2 = document.getElementById("num2");
-            var btn3 = document.getElementById("num3");
-            var btn4 = document.getElementById("num4");
-            var btn5 = document.getElementById("num5");
-            var btn6 = document.getElementById("num6");
+            var btn1 = $("#num1");
+            var btn2 = $("#num2");
+            var btn3 = $("#num3");
+            var btn4 = $("#num4");
+            var btn5 = $("#num5");
+            var btn6 = $("#num6");
             
-            var elems = document.getElementsByClassName('ui-btn');
+            var elems = $('.ui-btn');
             
             // hide buttons and show btn1
-            $(document).on("pagebeforecreate",function(event){
+            
                 for(var i = 0; i != elems.length; ++i)
             {   
-                elems[i].style.visibility = "hidden"; // hidden has to be a string
+                elems[i].css("visibility" , "hidden"); // hidden has to be a string
             }
-            document.getElementById('num1').style.visibility = 'visible';})
+            document.getElementById('num1').style.visibility = 'visible';
             
             // play video  function   
            /* $(document).on('taphold', '.ui-btn', function(){ 
                 $("#myVideo")[0].play();
             });*/
 
-            $( function () {
-                $( document ).on ( "vmousemove", ".ui-btn", function() {
+           function () {
+                $(document ).on ( "vmousemove", ".ui-btn",function() {
                 mdown = true;
                  if(mdown){
                 $('#myVideo')[0].play();
                  }else{
                   $('#myVideo')[0].pause();   
                  }
-                })});
-            $( function () {
+                })}
+             function () {
                 $( document ).on ( "vmouseup", ".ui-btn", function() {
                mup = true;
                  if(mup){
                 $('#myVideo')[0].pause();
                  }
-                })});
+                })}
              $( function () {
                 $( document ).on ( "vmouseout", ".ui-btn", function() {
                 $("#myVideo")[0].pause();
@@ -53,8 +54,8 @@
            
                                    
             //Button Pattern Displays     
-
-            var dis1= function(){
+            
+            var dis1= $(function(){
                 $(document).on("vmousedown", btn1, function(){
                 btn1to4FiveSecs();
                 });
@@ -70,7 +71,7 @@
                 $(document).on("vmousedown", btn3,function(){
                     btn3to5TenSecs();
                 });
-            };
+            });
             var dis2= function(){
                 $(btn1).on("vmousedown",function(){
                 btn1to6TenSecs();
@@ -87,8 +88,8 @@
                 $(btn2).on("vmousedown",function(){
                     btn2to4FiveSecs();
                 });
-            };
-                var dis3= function(){
+            
+                var dis3= $(function(){
                 $(btn1).on("vmousedown",function(){
                 btn1to5FiveSecs();
                 });
@@ -104,10 +105,9 @@
                 $(btn3).on("vmousedown",function(){
                     btn3to5TenSecs();
                 });
-            };
-                
+            
             //Find button display pattern
-            var findDisplayPattern = function(){
+            var findDisplayPattern =function(){
                 var i = Math.floor((Math.random() * 3) + 1);
                 
                 if(i===1){
@@ -118,14 +118,14 @@
                 }else{
                     return dis3();
                 }
-            };
+            });
             
               
             //*****************button route mapping************************* 
             //**************************************************************
             //**************************************************************
             // button display funtion for btn1 to btn4
-            $(document).on("pagebeforecreate", function(event){
+           
             function btn1to4FiveSecs(){
                 setTimeout(function(){
                     btn1.style.visibility="hidden";
@@ -433,3 +433,4 @@
                 }, 10000  );
                }
                 })
+            

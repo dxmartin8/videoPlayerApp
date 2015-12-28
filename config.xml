@@ -6,7 +6,7 @@
     
   <preference name="phonegap-version" value="cli-5.2.0" />
   <preference name="permissions" value="none"/>
-  
+   <preference name="EnableViewportScale" value="true" />
   <preference name="target-device" value="universal"/>
   <preference name="fullscreen" value="true"/>
   <preference name="webviewbounce" value="true"/>

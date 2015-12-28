@@ -31,33 +31,29 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
            <script type="text/javascript" src="cordova.js"></script>        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" src="js/video.js"></script>
+        <script type="text/javascript" src="js/pagetwo.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         
         
         <script type="text/javascript" src="plugins/cordova-plugin-screen-orientation/www/screenorientation.js"></script>
-        <script type="text/javascript">
-            document.addEventListener("deviceready", onDeviceReady, false); function onDeviceReady(){ screen.lockOrientation('landscape'); };
-            
-        </script>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
          </head>
     <body>
         
   <div data-role="page" id="pagetwo">
-      
+    <div data-role="main" >
     <video id="myVideo"  webkit-playsinline controls>
         <source src="http://66286169-603526731471035207.preview.editmysite.com/uploads/6/6/2/8/66286169/throw_n_battle_ninja_turtles_-_30_sec_ad.mp4">
         
     </video>    
      <div id="leftBar">
-         <div class="ui-grid-c">
-    <span><a onclick="findDisplayPattern()" id="num1" class="ui-btn "  class="mybtn" >Play</a></span>
-   <span> <a id="num2" class="ui-btn "  class="mybtn">Play</a></span>
-   <span> <a  id= "num3" class="ui-btn "  class="mybtn">Play</a></span>
-            <!--<span><a class="btn" id="num1" onclick="findDisplayPattern()" >Play</a></span>
+           
+            <span><a class="btn" id="num1" onclick="findDisplayPattern()" >Play</a></span>
         <span><a  class="btn" id="num2" >Play</a></span>
-        <span><a class="btn" id="num3" >Play</a></span>-->
-    </div>
+        <span><a class="btn" id="num3" >Play</a></span>
       </div>
     <div id="rightBar">
         <div class="ui-grid-c">
@@ -70,7 +66,7 @@
      </div>
       </div>
 </div>
-    
+        </div>
      
     </body>
 </html>
