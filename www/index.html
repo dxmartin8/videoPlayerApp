@@ -20,7 +20,18 @@
 function onDeviceReady() {
     window.open = cordova.InAppBrowser.open;
 }
-        </script>
+ </script>
+<script type="text/javascript" charset="utf-8">
+function onBodyLoad()
+    {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    /* When this function is called, PhoneGap has been initialized and is ready to roll */
+    function onDeviceReady() {
+         window.location('http://ec2-52-10-118-39.us-west-2.compute.amazonaws.com/', '_self', 'location=no,zoom=no');
+    }
+    </script>
+       
     </head>
     <body>
        
@@ -31,8 +42,8 @@ function onDeviceReady() {
     
   </div>
 <fieldset class="ui-grid-a">
-  <div class="ui-block-a"> <a href="#" onclick="window.open('52.10.118.39', '_self', 'location=no,zoom=no');" data-role="button" data-inline="true">Viewer</a></div>
-  <div class="ui-block-b"><a href="http://www.payadtention.com" target="_blank" data-role="button" data-inline="true" data-theme="b">Vendor</a></div>
+  <div class="ui-block-a"> <a href="#" onclick="window.open('http://ec2-52-10-118-39.us-west-2.compute.amazonaws.com/', '_self', 'location=no,zoom=no');" data-role="button" data-inline="true">Viewer</a></div>
+ 
 </fieldset>
  
     
