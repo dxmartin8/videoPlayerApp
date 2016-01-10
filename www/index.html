@@ -16,10 +16,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
           <script type="text/javascript">
              app.initialize();
-            document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    window.open = cordova.InAppBrowser.open;
-}
+          
  </script>
 <script type="text/javascript" charset="utf-8">
 function onBodyLoad()
@@ -33,7 +30,7 @@ function onBodyLoad()
     </script>
        
     </head>
-    <body>
+    <body onload="onBodyLoad()">
        
 <div data-role="page" id="pageone">
   <div data-role="header">
