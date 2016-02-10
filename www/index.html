@@ -19,10 +19,11 @@
           
  </script>
 <script type="text/javascript" charset="utf-8">
-function onBodyLoad()
-    {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
+<script>
+ jQuery(function(){
+ jQuery('#autoclickme').click();
+ });
+ </script>
     /* When this function is called, PhoneGap has been initialized and is ready to roll */
     function onDeviceReady() {
          window.location('http://ec2-52-10-118-39.us-west-2.compute.amazonaws.com/', '_self', 'location=no,zoom=no');
@@ -30,7 +31,7 @@ function onBodyLoad()
     </script>
        
     </head>
-    <body onload="onBodyLoad()">
+    <body >
        
 <div data-role="page" id="pageone">
   <div data-role="header">
@@ -39,7 +40,7 @@ function onBodyLoad()
     
   </div>
 <fieldset class="ui-grid-a">
-  <div class="ui-block-a"> <a href="#" onclick="window.open('http://ec2-52-10-118-39.us-west-2.compute.amazonaws.com/', '_self', 'location=no,zoom=no');" data-role="button" data-inline="true">Viewer</a></div>
+  <div class="ui-block-a"> <a href="#"  id="autoclickme" onclick="window.open('http://ec2-52-10-118-39.us-west-2.compute.amazonaws.com/', '_self', 'location=no,zoom=no');" data-role="button" data-inline="true">Viewer</a></div>
  
 </fieldset>
  
